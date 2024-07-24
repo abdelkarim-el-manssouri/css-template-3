@@ -136,6 +136,10 @@
   margin-inline: auto;
 }
 
+.justify-self-end {
+  justify-self: end;
+}
+
 .flow > :not(:first-child) {
   margin-top: var(--flow-spacer, 3em);
 }
@@ -168,6 +172,11 @@ p:not([class]) {
 
 p[data-width="wide"] {
   max-width: 43ch;
+}
+
+.opened {
+  display: block;
+  position: fixed;
 }
 
 /* button */
@@ -292,7 +301,42 @@ p[data-width="wide"] {
   }
 }
 
-.opened {
-  display: block;
-  position: fixed;
+.cta {
+  position: relative;
+  isolation: isolate;
+  .container {
+    .even-columns {
+      align-items: center;
+    }
+  }
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("../images/bg-tablet-pattern.svg"),
+    url("../images/bg-tablet-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: 5rem -5rem, 73rem -40rem;
+  opacity: 0.1;
+}
+
+@media (max-width: 50em) {
+  .cta {
+    .container {
+      .even-columns {
+        text-align: center;
+        align-items: center;
+        gap: var(--size-600);
+        .justify-self-end {
+          justify-self: center;
+        }
+      }
+    }
+  }
+  .cta::before {
+    background-position: -50em 0;
+  }
 }
