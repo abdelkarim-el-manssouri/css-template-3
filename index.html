@@ -20,7 +20,11 @@
   <body>
     <header class="primary-header">
       <div class="container">
-        <a href="#"><img src="images/logo.svg" alt="Manage" /></a>
+        <a href="#">
+          <svg class="logo" width="146" height="24" fill="#242D52">
+            <use xlink:href="images/logo.svg#logo"></use>
+          </svg>
+        </a>
         <button
           class="mobile-nav-toggle"
           aria-controls="primary-navigation"
@@ -157,15 +161,60 @@
       <div class="container">
         <div class="even-columns">
           <div>
-            <a href="#"><img src="images/logo.svg" alt="Manage" /></a>
-            <ul role="list" aria-label="social links">
-              <li><a aria-label="facebook" href="#"></a></li>
-              <li><a aria-label="youtube" href="#"></a></li>
-              <li><a aria-label="twitter" href="#"></a></li>
-              <li><a aria-label="pinterest" href="#"></a></li>
-              <li><a aria-label="instagram" href="#"></a></li>
+            <a href="#">
+              <svg class="footer-logo" width="146" height="24">
+                <use xlink:href="images/logo.svg#logo"></use>
+              </svg>
+            </a>
+            <ul class="social-list" role="list" aria-label="social links">
+              <li>
+                <a aria-label="facebook" href="#">
+                  <svg class="social-icon">
+                    <use
+                      xlink:href="images/social-icons.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="youtube" href="#">
+                  <svg class="social-icon">
+                    <use
+                      xlink:href="images/social-icons.svg#icon-youtube"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="twitter" href="#">
+                  <svg class="social-icon">
+                    <use
+                      xlink:href="images/social-icons.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="pinterest" href="#">
+                  <svg class="social-icon">
+                    <use
+                      xlink:href="images/social-icons.svg#icon-pinterest"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a aria-label="instagram" href="#">
+                  <svg class="social-icon">
+                    <use
+                      xlink:href="images/social-icons.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
+
           <div>
             <nav aria-label="footer">
               <ul role="list">
@@ -179,10 +228,11 @@
               </ul>
             </nav>
           </div>
+
           <div>
             <form action="">
               <input type="email" placeholder="Updates in your inbox…" />
-              <button class="button">Go</button>
+              <button class="button" data-shadow="none">Go</button>
             </form>
             <p>Copyright 2020. All Rights Reserved</p>
           </div>

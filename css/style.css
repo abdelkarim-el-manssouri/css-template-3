@@ -209,6 +209,10 @@ p[data-width="wide"] {
   }
 }
 
+.button[data-shadow="none"] {
+  box-shadow: none;
+}
+
 .primary-header {
   padding-top: var(--size-700);
   text-transform: capitalize;
@@ -338,5 +342,123 @@ p[data-width="wide"] {
   }
   .cta::before {
     background-position: -50em 0;
+  }
+}
+
+footer {
+  .container {
+    .even-columns {
+      div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .footer-logo {
+          --logo-color: var(--clr-accent-100);
+        }
+
+        ul {
+          display: flex;
+          gap: var(--size-200);
+          a {
+            .social-icon {
+              width: var(--size-500);
+              fill: var(--clr-neutral-100);
+              aspect-ratio: 1;
+            }
+            &:is(:hover, :focus) {
+              .social-icon {
+                fill: var(--clr-accent-400);
+              }
+            }
+          }
+        }
+      }
+
+      div:nth-child(2) {
+        nav {
+          columns: 2;
+          ul {
+            display: flex;
+            flex-direction: column;
+            li {
+              margin-block: var(--size-200);
+              a {
+                color: var(--clr-neutral-100);
+                text-decoration: none;
+                &:hover,
+                &:focus-visible {
+                  color: var(--clr-accent-400);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-self: end;
+
+        form {
+          display: flex;
+          gap: var(--size-300);
+          input:where([type="text"], [type="email"]) {
+            border-radius: 100vw;
+            border: 0;
+            padding: var(--size-300) var(--size-400);
+          }
+        }
+        p {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 50em) {
+  footer {
+    .container {
+      .even-columns {
+        gap: var(--size-700);
+        div:first-child {
+          order: 2;
+          height: 8em;
+          flex-direction: column-reverse;
+          align-items: center;
+
+          ul {
+            width: 100%;
+            gap: 0;
+            justify-content: space-around;
+            a {
+              .social-icon {
+                width: var(--size-600);
+              }
+            }
+          }
+        }
+
+        div:nth-child(2) {
+          order: 1;
+          ul {
+            li {
+              margin-left: var(--size-700);
+            }
+          }
+        }
+
+        div:last-child {
+          justify-self: center;
+          gap: var(--size-600);
+          p {
+            margin-inline: auto;
+          }
+        }
+      }
+    }
   }
 }
