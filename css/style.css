@@ -8,6 +8,7 @@
   --clr-primary-400: hsl(228, 39%, 23%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 97%);
   --clr-neutral-900: hsl(0, 0%, 0%);
 
   --ff-primary: "Be Vietnam Pro", sans-serif;
@@ -217,6 +218,11 @@ p[data-width="wide"] {
   }
 }
 
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 50em) {
   .button-center-sm-only {
     display: flex;
@@ -330,16 +336,6 @@ p[data-width="wide"] {
   }
 }
 
-.first-section {
-  .container {
-    .even-columns {
-      .flow {
-        /* order: 2; */
-      }
-    }
-  }
-}
-
 @media (max-width: 50em) {
   .first-section {
     .container {
@@ -347,9 +343,6 @@ p[data-width="wide"] {
         div:first-child {
           order: 2;
         }
-        /* div:last-child {
-          order: 1;
-        } */
       }
     }
   }
@@ -428,9 +421,74 @@ p[data-width="wide"] {
 }
 
 .carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .swiper {
+    margin-block: var(--size-900);
+    padding-block: var(--size-600);
+    /* background-color: aquamarine; */
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+        display: grid;
+        row-gap: var(--size-600);
+        text-align: center;
+        isolation: isolate;
+        img {
+          margin-inline: auto;
+          width: calc(var(--size-700) * 2);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: calc(var(--size-500) * -1);
+          left: -5%;
+          width: 110%;
+          height: 90%;
+          background-color: var(--clr-neutral-200);
+          z-index: -1;
+          border-radius: var(--size-200);
+        }
+      }
+    }
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
+@media (max-width: 50rem) {
+  .carousel {
+    .swiper {
+      margin-block: var(--size-600);
+      .swiper-wrapper {
+        padding-bottom: var(--size-600);
+        .swiper-slide {
+          padding-inline: var(--size-800);
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+      .swiper-pagination {
+        display: block;
+        bottom: 0;
+      }
+      .swiper-pagination-bullet {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: transparent;
+        border: solid 1px var(--clr-accent-500);
+      }
+      .swiper-pagination-bullet-active {
+        background-color: var(--clr-accent-400);
+        border-color: var(--clr-accent-400);
+      }
+    }
+
+    .button-container {
+      margin-top: var(--size-800);
+    }
+  }
 }
 
 .cta {

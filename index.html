@@ -15,6 +15,26 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- a11y-slider library -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
+    />
+    <script
+      src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"
+      defer
+    >    </script> -->
+
+    <!-- swiper library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script> -->
+
     <title>css-template-3</title>
   </head>
   <body>
@@ -148,12 +168,70 @@
         </div>
       </section>
 
-      <section class="carousel padding-block-700">
-        <h2 class="fs-secondary-heading fw-bold text-center-only-sm">
+      <section class="carousel | padding-block-700">
+        <h2
+          class="fs-secondary-heading fw-bold text-center-only-sm text-center"
+        >
           What they’ve said
         </h2>
-        <!-- TODO: carousel -->
-        <div class="button-center-sm-only">
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="images/avatar-anisha.png" alt="anisha's picture" />
+              <h5 class="reviewer-name fw-bold fs-600">Anisha Li</h5>
+              <q
+                >Manage has supercharged our team’s workflow. The ability to
+                maintain visibility on larger milestones at all times keeps
+                everyone motivated.
+              </q>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/avatar-ali.png" alt="ali's picture" />
+              <h5 class="reviewer-name fw-bold fs-600">ali bravo</h5>
+              <q
+                >We have been able to cancel so many other subscriptions since
+                using Manage. There is no more cross-channel confusion and
+                everyone is much more focused.
+              </q>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/avatar-richard.png" alt="richard's picture" />
+              <h5 class="reviewer-name fw-bold fs-600">Richard Watts</h5>
+              <q
+                >Manage allows us to provide structure and process. It keeps us
+                organized and focused. I can’t stop recommending them to
+                everyone I talk to!
+              </q>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/avatar-shanai.png" alt="shanai's picture" />
+              <h5 class="reviewer-name fw-bold fs-600">Shanai Gough</h5>
+              <q
+                >Their software allows us to track, manage and collaborate on
+                our projects from anywhere. It keeps the whole team in-sync
+                without being intrusive.
+              </q>
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+        <div class="button-container | button-center-sm-only button-center">
           <button class="button button-center-sm-only">Get Started</button>
         </div>
       </section>
@@ -256,5 +334,6 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
