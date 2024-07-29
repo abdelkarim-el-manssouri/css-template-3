@@ -15,29 +15,15 @@
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <!-- a11y-slider library -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css"
-    />
-    <script
-      src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js"
-      defer
-    >    </script> -->
-
     <!-- swiper library -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script> -->
-
     <title>css-template-3</title>
   </head>
   <body>
+    <div class="background-hero-section-pattern"></div>
     <header class="primary-header">
       <div class="container">
         <a href="#">
@@ -50,18 +36,6 @@
           aria-controls="primary-navigation"
           aria-expanded="false"
         >
-          <img
-            class="icon-hamburger"
-            src="images/icon-hamburger.svg"
-            alt=""
-            aria-hidden="true"
-          />
-          <img
-            class="icon-close"
-            src="images/icon-close.svg"
-            alt=""
-            aria-hidden="true"
-          />
           <span class="sr-only">menu</span>
         </button>
         <nav class="primary-navigation" id="primary-navigation">
@@ -79,7 +53,7 @@
 
     <main>
       <section
-        class="first-section | padding-block-900 padding-block-700-sm-only"
+        class="hero-section | padding-block-900 padding-block-700-sm-only"
       >
         <div class="container">
           <div class="even-columns">
@@ -87,7 +61,7 @@
               <h1 class="fs-primary-heading fw-bold text-center-only-sm">
                 Bring everyone together to build better products.
               </h1>
-              <p class="text-center-only-sm">
+              <p class="text-center-only-sm" data-width="semi-wide">
                 Manage makes it simple for software teams to plan day-to-day
                 tasks while keeping the larger team goals in view.
               </p>
@@ -113,7 +87,7 @@
               <h2 class="fs-secondary-heading fw-bold text-center-only-sm">
                 What’s different about Manage?
               </h2>
-              <p class="text-center-only-sm">
+              <p class="text-center-only-sm" data-width="semi-wide">
                 Manage provides all the functionality your team needs, without
                 the complexity. Our software is tailor-made for modern digital
                 product teams.
@@ -168,7 +142,7 @@
         </div>
       </section>
 
-      <section class="carousel | padding-block-700">
+      <section class="carousel | padding-block-900">
         <h2
           class="fs-secondary-heading fw-bold text-center-only-sm text-center"
         >

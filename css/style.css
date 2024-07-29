@@ -191,6 +191,12 @@ p:not([class]) {
 
 p[data-width="wide"] {
   max-width: 43ch;
+  opacity: 0.7;
+}
+
+p[data-width="semi-wide"] {
+  max-width: 40ch;
+  opacity: 0.7;
 }
 
 .opened {
@@ -244,6 +250,24 @@ p[data-width="wide"] {
   box-shadow: none;
 }
 
+.background-hero-section-pattern {
+  position: absolute;
+  z-index: -1;
+  background-image: url(/images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  top: -14rem;
+  right: 0rem;
+  width: 45%;
+  height: 100%;
+}
+
+@media (max-width: 50em) {
+  .background-hero-section-pattern {
+    top: -26rem;
+    width: 86%;
+  }
+}
+
 .primary-header {
   padding-top: var(--size-700);
   text-transform: capitalize;
@@ -291,6 +315,16 @@ p[data-width="wide"] {
         background: transparent;
         border: 0;
         padding: 0.5em;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        background-image: url("../images/icon-hamburger.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("../images/icon-close.svg");
       }
 
       .nav-list {
@@ -328,6 +362,11 @@ p[data-width="wide"] {
       }
     }
   }
+  .primary-header[data-overlay] {
+    position: relative;
+    z-index: 999;
+  }
+
   .primary-header[data-overlay]::before {
     content: "";
     position: fixed;
@@ -336,8 +375,12 @@ p[data-width="wide"] {
   }
 }
 
+.hero-section {
+  position: relative;
+}
+
 @media (max-width: 50em) {
-  .first-section {
+  .hero-section {
     .container {
       .even-columns {
         div:first-child {
@@ -394,10 +437,14 @@ p[data-width="wide"] {
       }
     }
   }
+  &::before {
+    display: none;
+  }
 }
 
 @media (min-width: 30em) {
   .why-manage {
+    position: relative;
     .container {
       .advantages-list {
         width: -moz-fit-content;
@@ -416,6 +463,14 @@ p[data-width="wide"] {
           }
         }
       }
+    }
+    &::before {
+      content: url(/images/bg-tablet-pattern.svg);
+      position: absolute;
+      z-index: -1;
+      top: 22rem;
+      left: -28rem;
+      display: block;
     }
   }
 }
