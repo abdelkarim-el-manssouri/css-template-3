@@ -253,7 +253,7 @@ p[data-width="semi-wide"] {
 .background-hero-section-pattern {
   position: absolute;
   z-index: -1;
-  background-image: url(/images/bg-tablet-pattern.svg);
+  background-image: url(../images/bg-tablet-pattern.svg);
   background-repeat: no-repeat;
   top: -14rem;
   right: 0rem;
@@ -465,7 +465,7 @@ p[data-width="semi-wide"] {
       }
     }
     &::before {
-      content: url(/images/bg-tablet-pattern.svg);
+      content: url(../images/bg-tablet-pattern.svg);
       position: absolute;
       z-index: -1;
       top: 22rem;
